@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Delete Form</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h2{
+        font-size:40px;
+    }
+    form{
+        border:3px blue solid;
+        padding:20px;
+        border-radius: 20px;
+        margin-top:auto;
+
+    }
+    body{
+        background-color:cyan;
+        background-image: url("https://www.indiablooms.com/showbiz_pic/2018/1-1537521780.jpg");
+
+    }
+
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="POST">
+                <h2 class="text-center text-success bg-danger">Please Delete Product</h2>
+                {% csrf_token %}
+                {{ dform }}<br>
+                <center>
+                    <input type="submit" value="Delete" class="btn btn-success">
+                    <input type="reset" value="Clear" class="btn btn-danger"><br>
+                    <a href="/#/">GoTo Main Page</a>
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
